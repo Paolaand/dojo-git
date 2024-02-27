@@ -8,28 +8,27 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Git es un sistema de control de versiones que permite mantener un historial de cambios en los proyectos. 
+        
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'GitLab',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        GitLab es un entorno de desarrollo de software que permite organizar y administrar el código fuente de 
+        los proyectos.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Dojo de Intelix',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Dojo de Intelix es una iniciativa de aprender practicando.
       </>
     ),
   },
