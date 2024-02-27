@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdojo_git=self.webpackChunkdojo_git||[]).push([[407],{1941:o=>{o.exports=JSON.parse('{"permalink":"/dojo-git/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
