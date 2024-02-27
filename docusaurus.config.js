@@ -76,7 +76,7 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/9269766.png',
         },
-        items: [
+        /*items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -89,7 +89,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-        ],
+        ],*/
       },
       /*footer: {
         style: 'dark',
