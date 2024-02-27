@@ -232,3 +232,94 @@ Clonar el repositorio de jquery.
 ```js
 $ git clone https://github.com/jquery/jquery.git
 ```
+
+### Merge
+
+Combina los cambios de commits realizados externamente dentro de la rama en la que se trabaja.
+
+Combina la rama especificada en la rama actual
+```js
+$ git merge new_feature
+```
+Se asegura de generar un commit cuando se utiliza merge
+```js
+$ git merge --no-ff new_feature
+```
+
+### Pull
+
+Trae los cambios de un repositorio y los combina en otra rama diferente.
+
+Actualiza el repositorio local, combinando los nuevos cambios de las ramas remotas **"origin"** y **"master".**
+```js
+$ git pull origin master
+```
+### Push
+Envía y combina los cambios de un repositorio local a un repositorio y rama remotos.
+
+Envía y combina cambios de un repositorio local hacia un repositorio remoto llamados **"origin"** y **"master"**, respectivamente.
+```js
+$ git pull origin master
+```
+
+### Tag
+
+Permite marcar puntos específicos de la historia del repositorio. 
+
+Crea una etiqueta anotada.
+```js
+$ git tag -a v1.4.0 -m "Version 1.4.0"
+```
+Crea una etiqueta ligera.
+```js
+$ git tag v1.4.0-SNAPSHOT
+```
+### Rebase
+Toma todos los cambios que fueron registrados en una rama, y los repite dentro de otra rama. No reescribe los commits que se han empujado antes a un repositorio público.
+
+Integrar hot-fix dentro de la rama **"master"**
+```js
+$ git rebase master hot-fix
+```
+
+### Reset (Precaución)
+
+Reinicia la referencia HEAD actual hacia un estado especificado. Esto permite deshacer combinaciones (merges), pulls, commits, adds y más.
+
+Es un comando útil, pero también delicado si no se sabe lo que se está haciendo. Reinicia el área de preparación, con el último cambio registrado. (deja los directorios sin cambios).
+
+```js
+$ git reset
+```
+Reinicia el área de prepa de preparación, con el último cambio registrado, y reescribe el directorio de trabajo.
+
+```js
+$ git reset --hard
+```
+### Remove
+
+Lo contrario de git add, git rm elimina los archivos del directorio de trabajo actual.
+
+Elimina FooBar.c
+```js
+$ git rm FooBar.c
+```
+Elimina un archivo de un directorio
+```js
+$ git rm /directorio/del/archivo/FooBar.c
+```
+
+### Stash
+
+Usamos git stash para almacenar nuestros cambios cuando no están listos para confirmarse y necesitamos cambiar a una rama diferente.
+```js
+$ git stash save "this is a message to display on the list"
+```
+Aplicar para continuar haciendo cambios:
+```js
+$ git stash apply
+```
+Cada vez que guardamos un stash este se va apilando por lo que podemos usar el comando list para ver todos los elementos:
+```js
+$ git stash list
+```

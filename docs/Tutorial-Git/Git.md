@@ -1,10 +1,12 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Git'
 ---
 
 # ¿Que es GIT?
 
-Es un software de control de versiones, su propósito es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos (También puedes trabajar solo no hay problema 😃). Existe la posibilidad de trabajar de forma remota como GitHub o GitLab, entre otros.
+Es un software de control de versiones. Fue creado por Linus Torvalds en 2005 y se ha convertido en una parte esencial del flujo de trabajo de los desarrolladores, su propósito es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos (También puedes trabajar solo no hay problema 😃). Existe la posibilidad de trabajar de forma remota como GitHub o GitLab, entre otros.
+
 
 ## ¿Para que usar GIT?
 
