@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdojo_git=self.webpackChunkdojo_git||[]).push([[5989],{5886:o=>{o.exports=JSON.parse('{"label":"hola","permalink":"/dojo-git/blog/tags/hola","allTagsPath":"/dojo-git/blog/tags","count":1,"unlisted":false}')}}]);
