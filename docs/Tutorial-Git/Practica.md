@@ -98,4 +98,166 @@ $ git push origin feature-squash-bugs
 
 ## Estartegias de Ramificación.
 
+- Al manejar muchas ramas el mantenimiento de un proyecto se complica rápidamente.
+- Todas las ramas de funcionalidades comienzan desde la rama de desarrollo y se van unificando hacia la rama principal.
+- El modelo de ramificación Gitflow está muy bien documentado y presenta una solución adecuada para el despliegue de software.
+
+![Flujo de los branch](./../img/git-flow.png)
+
+## Etiquetas 
+Las etiquetas son útiles para marcar despliegues y lanzamientos de nuevas versiones del producto.
+- Las etiquetas anotadas son una parte inmutable de la historia como una confirmación.
+- Las etiquetas blandas se pueden configurar y eliminar a voluntad.
+- Muchos proyectos combinan una etiqueta de lanzamiento con una rama estable para esa versión menor.
+- Considere configurar etiquetas de despliegue automáticamente.
+
+### Actividad:
+Establece una etiqueta suave y una etiqueta anotada en un repositorio dando un SHA1 de no más de 8 caracteres y empuja las etiquetas al repositorio remoto.
+
+### Solución:
+```js
+$ git checkout master
+```
+Establece una etiqueta suave
+```js
+$ git tag ligth_tag
+```
+Establece una etiqueta anotada
+```js
+$ git tag -a v1.0.0 -m "Version 1.0.0"
+```
+```js
+$ git push origin --tags
+```
+## Stash 
+
+Usamos git stash para almacenar nuestros cambios cuando no están listos para confirmarse y necesitamos cambiar a una rama diferente.
+```js
+$ git stash save "this is a message to display on the list"
+```
+Aplicar para continuar haciendo cambios:
+```js
+$ git stash apply
+```
+Cada vez que guardamos un stash este se va apilando por lo que podemos usar el comando list para ver todos los elementos:
+```js
+$ git stash list
+```
+### Actividad:
+- Modifica un archivo, prepáralo y esconde sus cambios.
+- Ve la lista de elementos escondidos.
+- Confirma que no existan cambios verificando el estado.
+- Aplica los cambios escondidos mediante el comando apply.
+- Ve nuevamente la lista de elementos escondidos y el estado.
+
+### Solución:
+Modifica el archivo edit_this_file.rb
+```js
+$ git add .
+```
+```js
+$ git stash save "Saving changes"
+```
+```js
+$ git stash list
+```
+```js
+$ git status
+```
+```js
+$ git stash apply
+```
+```js
+$ git stash list
+```
+```js
+$ git status
+```
+
+## Conflictos
+
+- Son muy comunes en el mantenimiento de un proyecto.
+- Se mitigan manteniendo una buena comunicación entre miembros del equipo.
+- Se deben traer y sincronizar los cambios antes de enviar los locales.
+- Estos conflictos deben resolverse uno por uno.
+- Luego se confirman los cambios para la unificación del conflicto y se sincroniza con el repositorio remoto.
+
+### Actividad:
+- Crea una nueva rama y edita el archivo **“conflicts.rb”** añadiendo **"Line4"** y **"Line5"** debajo de **"Line3**"
+- Haz commit y push en la rama.
+- Cambia a la rama master y edita el archivo nuevamente añadiendo **"Line6"** y **"Line7"** debajo de **"Line3."**
+- Haz commit y push a master.
+- Crea una solicitud de unificación y observa como falla.
+
+### Solución:
+```js
+$ git checkout -b conflicts_branch
+```
+Edita **“conflicts.rb”** añadiendo **"Line4"** y **"Line5"**
+```js
+$ git commit -am "add line4 and line5"
+```
+```js
+$ git push origin conflicts_branch
+```
+```js
+$ git checkout master
+```
+Edita “conflicts.rb” añadiendo **"Line6"** y **"Line7"**
+```js
+$ git commit -am "add line6 and line7"
+```
+```js
+$ git push origin master
+```
+Crea una solicitud de mezcla.
+
+### Deshacer
+
+- Corrige el comentario del commit anterior
+```js
+$ git commit --amend -m "New Message"
+```
+- Deshace el último commit llevando todo al área de preparación
+```js
+$ git reset --soft HEAD^
+```
+- Deshace el último commit y descarta los cambios
+```js
+$ git reset --hard HEAD^
+```
+- Igual que el anterior pero deshace los dos últimos commits
+```js
+$ git reset --hard HEAD^^
+```
+
+### Actividad:
+- Edita el archivo **"edit_this_file.rb"** y verifica el estado.
+- Haz commit con un comentario erróneo y ve el mismo en el log.
+- Corrige el comentario y ve el cambio en el log.
+- Elimina el último commit llevando los cambios al area de preparacion y ve el cambio en el log.
+
+### Solución:
+Edita el archivo “edit_this_file.rb”
+```js
+$ git status
+```
+```js
+$ git commit -am "qwerty"
+```
+```js
+$ git log
+```
+```js
+$ git commit --amend "New comment added"
+```
+```js
+$ git log
+```
+```js
+$ git reset --soft HEAD^
+```
+```js
+$ git log
+```
 
