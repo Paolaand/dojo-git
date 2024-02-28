@@ -23,3 +23,8 @@ En resumen:
 
 ## Flujo de Trabajo de GitLab
 
+- Al manejar muchas ramas el mantenimiento de un proyecto se complica rápidamente.
+- Todas las ramas de funcionalidades comienzan desde la rama de desarrollo y se van unificando hacia la rama principal.
+- El modelo de ramificación Gitflow está muy bien documentado y presenta una solución adecuada para el despliegue de software.
+
+![Gitflow](./../img/git-flow.png)

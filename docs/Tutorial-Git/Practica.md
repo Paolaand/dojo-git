@@ -47,12 +47,6 @@ $ git log
 ```
 ## Branch por Funcionalidades.
 
-- Flujo de trabajo más eficiente para equipos.
-- Desarrollar cada funcionalidad / historia de usuario en una rama.
-- Hace que sea fácil diseñar / desarrollar / probar / desplegar.
-- Tratar de tener un enlace uno a uno a los problemas.
-- Empuje la rama al repositorio remoto con frecuencia.
-
 ### Actividad:
 
 - Crea una nueva rama llamada feature-squash-bugs.
@@ -80,14 +74,6 @@ $ git push origin feature-squash-bugs
 
 ## Solicitud de Unificación.
 
-- Colaborar en ramas de funcionalidades.
-- Cuando desee comentarios, cree una solicitud de unificación.
-- Asignar a la persona que le gustaría revisar.
-- Si no está listo para unirse y sólo desea comentarios, indíquelo en un comentario. Añade WIP en el título.
-- Cuando se acepte siempre elimine la rama.
-- Otras personas son libres de agregar comentarios.
-- Empujar correcciones a la misma rama.
-
 ### Actividad:
 - Crea una nueva solicitud de unificación.
 - Utiliza el botón azul de la lista de actividades para crear una nueva solicitud a partir de la rama creada anteriormente.
@@ -95,40 +81,6 @@ $ git push origin feature-squash-bugs
 - Haz una nueva modificación y envía un nuevo commit a la misma rama de la solicitud.
 - Ve los cambios en la solicitud y verifica que la misma está actualizada.
 
-
-## Estartegias de Ramificación.
-
-- Al manejar muchas ramas el mantenimiento de un proyecto se complica rápidamente.
-- Todas las ramas de funcionalidades comienzan desde la rama de desarrollo y se van unificando hacia la rama principal.
-- El modelo de ramificación Gitflow está muy bien documentado y presenta una solución adecuada para el despliegue de software.
-
-![Flujo de los branch](./../img/git-flow.png)
-
-## Etiquetas 
-Las etiquetas son útiles para marcar despliegues y lanzamientos de nuevas versiones del producto.
-- Las etiquetas anotadas son una parte inmutable de la historia como una confirmación.
-- Las etiquetas blandas se pueden configurar y eliminar a voluntad.
-- Muchos proyectos combinan una etiqueta de lanzamiento con una rama estable para esa versión menor.
-- Considere configurar etiquetas de despliegue automáticamente.
-
-### Actividad:
-Establece una etiqueta suave y una etiqueta anotada en un repositorio dando un SHA1 de no más de 8 caracteres y empuja las etiquetas al repositorio remoto.
-
-### Solución:
-```js
-$ git checkout master
-```
-Establece una etiqueta suave
-```js
-$ git tag ligth_tag
-```
-Establece una etiqueta anotada
-```js
-$ git tag -a v1.0.0 -m "Version 1.0.0"
-```
-```js
-$ git push origin --tags
-```
 ## Stash 
 
 Usamos git stash para almacenar nuestros cambios cuando no están listos para confirmarse y necesitamos cambiar a una rama diferente.
@@ -260,4 +212,10 @@ $ git reset --soft HEAD^
 ```js
 $ git log
 ```
+## Preguntas
+¡Gracias por tu duro trabajo! ¿Tienes alguna pregunta?. 
 
+Ve esta presentación y deja comentarios al respecto en **https://bit.ly/2m2Hdsu**
+- **Clientes UI:** http://git-scm.com/downloads/guis 
+- **Libro de Git:** http://git-scm.com/book
+- **Tutoriales:** http://try.github.io/
